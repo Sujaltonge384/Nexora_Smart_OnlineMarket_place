@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon </title>
+  <link rel="stylesheet" href="\styles.css">
+  <link rel="stylesheet" href="Daily.css" />
+</head>
+<body>
+  <header class="navbar">
+
+  <!-- Left: Logo -->
+  <div class="nav-left">
+    <a href="\index.html" class="logo">Nexora</a>
+  </div>
+
+  <!-- Center: Search -->
+  <div class="nav-center">
+    <div class="search-bar">
+      <input type="text" placeholder="Search Products" id="searchInput" />
+      <button onclick="searchProducts()">Search</button>
+    </div>
+  </div>
+
+  <a href="\orders.html" style="padding-right: 40px; text-decoration: none;">My Orders</a>
+
+  <!-- Right: Cart + Auth -->
+  <div class="nav-right">
+    <a href="\cart.html" class="cart-link">
+      Cart (<span id="cart-count">0</span>)
+    </a>
+
+     <div id="authSection">
+    <a href="\login.html" class="nav-item">Login</a>
+    <a href="\register.html" class="nav-item">Register</a>
+  </div>
+  </div>
+
+</header>
+
+
+  <nav class="categories">
+    <a href="\index.html">Nexora</a>
+    <a href="\bestseller.html">Bestseller</a>
+    <a href="\todays_deal.html">Today's Deal</a>
+    <a href="\mobile.html">Mobile</a>
+    <a href="\Computers.html">Computers</a>
+    <a href="\electronics.html">Electronics</a>
+    <a href="\fashion.html">Fashion</a>
+    <a href="\home.html">Home & Kitchen</a>
+    <a href="\books.html">Books</a>
+    <a href="\toys.html">Toys & Games</a>
+    <a href="\Nexora_pay.html">Nexora Pay</a>
+    <a href="\car_bikes.html">Cars & Bikes</a>
+    <a href="\customer_service.html">Customer Service</a>
+  </nav>
+
+<!-- HEADER -->
+<div class="daily-header">
+  <h2>Nexora Daily</h2>
+  <span>Delivering Fresh & Essentials</span>
+</div>
+
+<!-- CATEGORY NAV -->
+<div class="daily-nav">
+  <a href="Daily.html">Nexora Daily</a>
+  <a href="Daily_All_Pages/Fruits&vegitable.html">Fruits & Vegetables</a>
+  <a href="Daily_All_Pages/Att_Rice.html">Atta, rice & grains</a>
+  <a href="Daily_All_Pages/Oil_ghee.html">Oil & ghee</a>
+  <a href="Daily_All_Pages/Milk_dairy.html">​Milk & dairy</a>
+  <a href="Daily_All_Pages/Chips_biscuits.html">Chips & biscuits</a>
+  <a href="Daily_All_Pages/Egg_meats_fish.html">Eggs, meat & fish</a>
+  <a href="Daily_All_Pages/Bath_Body.html">Bath & body</a>
+  <a href="Daily_All_Pages/Laundry_detergents.html">Laundry detergents</a>
+  <a href="Daily_All_Pages/Baby_care.html">Baby care</a>
+</div>
+
+<!-- HERO SLIDER -->
+<div class="slider-wrapper">
+  <div class="slider" id="slider">
+
+    <div class="slide">
+      <img src="images/daily-side-1.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="images/daily-side-2.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="images/daily-side-3.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="images/daily-side-4.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="images/daily-side-5.jpg">
+    </div>
+   
+</div>
+
+  </div>
+
+<!-- ================= GROCERY SECTION ================= -->
+<section class="grocery-section">
+
+  <h2>Groceries & Food</h2>
+
+  <div class="grocery-grid">
+
+    <div class="grocery-item">
+      <a href="Daily_All_Pages/Fresh_Vegetables.html">
+      <div class="circle">
+        <img src="images/Fresh_Vegetables.jpg">
+      </div>
+      <p>Fresh Vegetables</p>
+      </a>
+    </div>
+
+    <div class="grocery-item">
+      <a href="Daily_All_Pages/Fresh_Fruits.html">
+      <div class="circle">
+        <img src="images/Fresh_fruits.jpg">
+      </div>
+      <p>Fresh Fruits</p>
+      </a>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Atta_Rice__grains.jpg">
+      </div>
+      <p>Atta, Rice & Grains</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Dals__Pulses.jpg">
+      </div>
+      <p>Dals & Pulses</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Oil__Ghee.jpg">
+      </div>
+      <p>Oil & Ghee</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Masala_sugar__spices.jpg">
+      </div>
+      <p>Masala & Spices</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Milk__dairy.jpg">
+      </div>
+      <p>Milk & Dairy</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Breads__bakery.jpg">
+      </div>
+      <p>Breads & Bakery</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Cereals__dry_fruits.jpg">
+      </div>
+      <p>Cereals & Dry Fruits</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Tea_coffee__drink_mixes_BAU.jpg">
+      </div>
+      <p>Tea & Coffee</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Juices__cold_drinks.jpg">
+      </div>
+      <p>Juices & Drinks</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Sauces__spreads.jpg">
+      </div>
+      <p>Sauces & Spreads</p>
+    </div>
+   
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/dry-fruits_1.jpg">
+      </div>
+      <p>Dry fruits</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Noodles__pasta.jpg">
+      </div>
+      <p>Noodles & pasta</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Chips.jpg">
+      </div>
+      <p>Chips & Discuits</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Choclate__Ice_cream.jpg">
+      </div>
+      <p>Chocolates & ice cream</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Ready_to_eat__frozen_food.jpg">
+      </div>
+      <p>Ready to eat & frozen food</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Indian_Snacks_1.jpg">
+      </div>
+      <p>indian snacks</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Indian-sweets_1.0_2.jpg">
+      </div>
+      <p>Indian sweets</p>
+    </div>
+
+    <div class="grocery-item">
+      <div class="circle">
+        <img src="images/Eggs_meat__fish.jpg">
+      </div>
+      <p>Eggs, meat & fish</p>
+    </div>
+
+  </div>
+
+  
+
+</section>
+
+
+<section class="Beauty-section">
+
+  <h2> Beauty & Personal care</h2>
+
+  <div class="Beauty-grid">
+
+    <div class="Beauty-item">
+      <div class="circle-Beauty">
+        <img src="images/Bath__body.jpg.png">
+      </div>
+      <p>Bath & body</p>
+    </div>
+
+    <div class="Beauty-item">
+      <div class="circle-Beauty">
+        <img src="images/Hair_care.jpg">
+      </div>
+      <p>Hair care</p>
+    </div>
+
+    <div class="Beauty-item">
+      <div class="circle-Beauty">
+        <img src="images/Skincare.jpg">
+      </div>
+      <p>Skin & face</p>
+    </div>
+
+    <div class="Beauty-item">
+      <div class="circle-Beauty">
+        <img src="images/Deos__perfumes.jpg">
+      </div>
+      <p>Deos & perfumes</p>
+    </div>
+
+    <div class="Beauty-item">
+      <div class="circle-Beauty">
+        <img src="images/Feminine_hygiene.jpg">
+      </div>
+      <p>Feminine hygiene</p>
+    </div>
+
+    <div class="Beauty-item">
+      <div class="circle-Beauty">
+        <img src="images/Mens_grooming.jpg">
+      </div>
+      <p>Men's grooming</p>
+    </div>
+
+    <div class="Beauty-item">
+      <div class="circle-Beauty">
+        <img src="images/Oral_care.jpg">
+      </div>
+      <p>Oral Care</p>
+    </div>
+
+    <div class="Beauty-item">
+      <div class="circle-Beauty">
+        <img src="images/Baby_care.jpg">
+      </div>
+      <p>Baby Care</p>
+    </div>
+
+    <div class="Beauty-item">
+      <div class="circle-Beauty">
+        <img src="images/Makeup__cosmetics.jpg.png">
+      </div>
+      <p>Makeup & cosmetics</p>
+    </div>
+
+    <div class="Beauty-item">
+      <div class="circle-Beauty">
+        <img src="images/Pharma__wellness.jpg.png">
+      </div>
+      <p>Pharma & wellness</p>
+    </div>
+
+    <div class="Beauty-item">
+      <div class="circle-Beauty">
+        <img src="images/Diet__nutrition.jpg.png">
+      </div>
+      <p>Diet & nutrition</p>
+    </div>
+
+    <div class="Beauty-item">
+      <div class="circle-Beauty">
+        <img src="images/Pet_care.jpg.png">
+      </div>
+      <p>Pet care</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= HOUSEHOLD ESSENTIALS ================= -->
+<section class="household-section">
+
+  <h2>Household Essentials</h2>
+
+  <div class="household-grid">
+
+    <div class="household-item">
+      <div class="house-circle">
+        <img src="images/Laundry_detergents.jpg.png">
+      </div>
+      <p>Laundry detergents</p>
+    </div>
+
+    <div class="household-item">
+      <div class="house-circle">
+        <img src="images/Household__toilet_cleaners.jpg.png">
+      </div>
+      <p>Household & toilet cleaners</p>
+    </div>
+
+    <div class="household-item">
+      <div class="house-circle">
+        <img src="images/Cleaning_supplies.jpg.png">
+      </div>
+      <p>Cleaning supplies</p>
+    </div>
+
+    <div class="household-item">
+      <div class="house-circle">
+        <img src="images/Home__kitchen.jpg.png">
+      </div>
+      <p>Home & kitchen</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="everyday-section">
+ 
+  <h1 class="daily-title">Everyday needs </h1>
+  <!-- ================= FRUITS ================= -->
+  <div class="daily-category-box">
+      
+    
+
+    <div class="category-header">
+      <h2>Fruits</h2>
+      <a href="#" class="see-all">See all ></a>
+    </div>
+       <hr>
+    <div class="slider-wrapper">
+
+
+        <!-- PRODUCT CARD -->
+        <div class="daily-product">
+          <div class="discount">29% OFF</div>
+          <img src="assets/images/coconut.png">
+          <button class="add-btn"
+            onclick="addToCart('Fresh Coconut', 42, 'assets/images/coconut.png', 'Medium coconut 400-450g', 'fresh')">
+            Add
+          </button>
+          <p class="product-name">Fresh Coconut - Medium</p>
+          <p class="price">₹42 <span>₹59</span></p>
+        </div>
+
+        <div class="daily-product">
+          <div class="discount">22% OFF</div>
+          <img src="assets/images/lemon.png">
+          <button class="add-btn"
+            onclick="addToCart('Fresh Lemon', 21, 'assets/images/lemon.png', 'Fresh produce lemon 3 pcs', 'fresh')">
+            Add
+          </button>
+          <p class="product-name">Fresh Lemon 3 pcs</p>
+          <p class="price">₹21 <span>₹27</span></p>
+        </div>
+
+        <div class="daily-product">
+          <div class="discount">33% OFF</div>
+          <img src="assets/images/apple.png">
+          <button class="add-btn"
+            onclick="addToCart('Fresh Apple Royal Gala', 213, 'assets/images/apple.png', 'Premium apple 1kg pack', 'fresh')">
+            Add
+          </button>
+          <p class="product-name">Fresh Apple Royal Gala</p>
+          <p class="price">₹213 <span>₹320</span></p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- ================= VEGATABLE ================= -->
+  <div class="daily-category-box">
+      <div class="category-header">
+      <h2>Vegatables</h2>
+      <a href="#" class="see-all">See all ></a>
+    </div>
+       <hr>
+    <div class="slider-wrapper">
+
+
+        <!-- PRODUCT CARD -->
+        <div class="daily-product">
+          <div class="discount">29% OFF</div>
+          <img src="assets/images/coconut.png">
+          <button class="add-btn"
+            onclick="addToCart('Fresh Coconut', 42, 'assets/images/coconut.png', 'Medium coconut 400-450g', 'fresh')">
+            Add
+          </button>
+          <p class="product-name">Fresh Coconut - Medium</p>
+          <p class="price">₹42 <span>₹59</span></p>
+        </div>
+
+        <div class="daily-product">
+          <div class="discount">22% OFF</div>
+          <img src="assets/images/lemon.png">
+          <button class="add-btn"
+            onclick="addToCart('Fresh Lemon', 21, 'assets/images/lemon.png', 'Fresh produce lemon 3 pcs', 'fresh')">
+            Add
+          </button>
+          <p class="product-name">Fresh Lemon 3 pcs</p>
+          <p class="price">₹21 <span>₹27</span></p>
+        </div>
+
+        <div class="daily-product">
+          <div class="discount">33% OFF</div>
+          <img src="assets/images/apple.png">
+          <button class="add-btn"
+            onclick="addToCart('Fresh Apple Royal Gala', 213, 'assets/images/apple.png', 'Premium apple 1kg pack', 'fresh')">
+            Add
+          </button>
+          <p class="product-name">Fresh Apple Royal Gala</p>
+          <p class="price">₹213 <span>₹320</span></p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+<!-- ================= MILK ================= -->
+  <div class="daily-category-box">
+       <div class="category-header">
+      <h2>Milk</h2>
+      <a href="#" class="see-all">See all ></a>
+    </div>
+       <hr>
+    <div class="slider-wrapper">
+
+
+        <!-- PRODUCT CARD -->
+        <div class="daily-product">
+          <div class="discount">29% OFF</div>
+          <img src="assets/images/coconut.png">
+          <button class="add-btn"
+            onclick="addToCart('Fresh Coconut', 42, 'assets/images/coconut.png', 'Medium coconut 400-450g', 'fresh')">
+            Add
+          </button>
+          <p class="product-name">Fresh Coconut - Medium</p>
+          <p class="price">₹42 <span>₹59</span></p>
+        </div>
+
+        <div class="daily-product">
+          <div class="discount">22% OFF</div>
+          <img src="assets/images/lemon.png">
+          <button class="add-btn"
+            onclick="addToCart('Fresh Lemon', 21, 'assets/images/lemon.png', 'Fresh produce lemon 3 pcs', 'fresh')">
+            Add
+          </button>
+          <p class="product-name">Fresh Lemon 3 pcs</p>
+          <p class="price">₹21 <span>₹27</span></p>
+        </div>
+
+        <div class="daily-product">
+          <div class="discount">33% OFF</div>
+          <img src="assets/images/apple.png">
+          <button class="add-btn"
+            onclick="addToCart('Fresh Apple Royal Gala', 213, 'assets/images/apple.png', 'Premium apple 1kg pack', 'fresh')">
+            Add
+          </button>
+          <p class="product-name">Fresh Apple Royal Gala</p>
+          <p class="price">₹213 <span>₹320</span></p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+<!-- ================= Breads ================= -->
+  <div class="daily-category-box">
+      <div class="category-header">
+      <h2>Breads</h2>
+      <a href="#" class="see-all">See all ></a>
+    </div>
+       <hr>
+    <div class="slider-wrapper">
+
+
+        <!-- PRODUCT CARD -->
+        <div class="daily-product">
+          <div class="discount">29% OFF</div>
+          <img src="assets/images/coconut.png">
+          <button class="add-btn"
+            onclick="addToCart('Fresh Coconut', 42, 'assets/images/coconut.png', 'Medium coconut 400-450g', 'fresh')">
+            Add
+          </button>
+          <p class="product-name">Fresh Coconut - Medium</p>
+          <p class="price">₹42 <span>₹59</span></p>
+        </div>
+
+        <div class="daily-product">
+          <div class="discount">22% OFF</div>
+          <img src="assets/images/lemon.png">
+          <button class="add-btn"
+            onclick="addToCart('Fresh Lemon', 21, 'assets/images/lemon.png', 'Fresh produce lemon 3 pcs', 'fresh')">
+            Add
+          </button>
+          <p class="product-name">Fresh Lemon 3 pcs</p>
+          <p class="price">₹21 <span>₹27</span></p>
+        </div>
+
+        <div class="daily-product">
+          <div class="discount">33% OFF</div>
+          <img src="assets/images/apple.png">
+          <button class="add-btn"
+            onclick="addToCart('Fresh Apple Royal Gala', 213, 'assets/images/apple.png', 'Premium apple 1kg pack', 'fresh')">
+            Add
+          </button>
+          <p class="product-name">Fresh Apple Royal Gala</p>
+          <p class="price">₹213 <span>₹320</span></p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</section>
+
+<script src="Daily.js"></script>
+<script src="/script.js"></script>
+
+</body>
+</html>

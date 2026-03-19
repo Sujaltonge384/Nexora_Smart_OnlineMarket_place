@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Essentials | Amazon</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+
+  <!-- Left: Logo -->
+  <div class="nav-left">
+    <a href="index.html" class="logo">Nexora</a>
+  </div>
+
+  <!-- Center: Search -->
+  <div class="nav-center">
+    <div class="search-bar">
+      <input type="text" placeholder="Search Products" id="searchInput" />
+      <button onclick="searchProducts()">Search</button>
+    </div>
+  </div>
+
+  <a href="orders.html" style="padding-right: 40px; text-decoration: none;">My Orders</a>
+
+  <!-- Right: Cart + Auth -->
+  <div class="nav-right">
+    <a href="cart.html" class="cart-link">
+      Cart (<span id="cart-count">0</span>)
+    </a>
+
+     <div id="authSection">
+    <a href="login.html" class="nav-item">Login</a>
+    <a href="register.html" class="nav-item">Register</a>
+  </div>
+  </div>
+
+</header>
+<nav class="categories">
+    <a href="Nexora_Daily/Daily.html">Nexora Daily</a>
+    <a href="bestseller.html">Bestseller</a>
+    <a href="todays_deal.html">Today's Deal</a>
+    <a href="mobile.html">Mobile</a>
+    <a href="Computers.html">Computers</a>
+    <a href="electronics.html">Electronics</a>
+    <a href="fashion.html">Fashion</a>
+    <a href="home.html">Home & Kitchen</a>
+    <a href="books.html">Books</a>
+    <a href="toys.html">Toys & Games & Games</a>
+    <a href="Nexora_pay.html">Nexora Pay</a>
+    <a href="car_bikes.html">Cars & Bikes</a>
+    <a href="customer_service.html">Customer Service</a>
+  </nav>
+  <main>
+    <h1>Home & Kitchen</h1>
+    <div class="products">
+      <div class="product">
+        <img src="img/mixer.jpg" alt="Mixer" />
+        <h2>Mixer Grinder</h2>
+        <p>$89</p>
+        <button onclick="addToCart('Mixer Grinder', 89)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="img/cooker.jpg" alt="Cooker" />
+        <h2>Pressure Cooker</h2>
+        <p>$49</p>
+        <button onclick="addToCart('Pressure Cooker', 49)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="img/cooker.jpg" alt="Cooker" />
+        <h2>Pressure Cooker</h2>
+        <p>$49</p>
+        <button onclick="addToCart('Pressure Cooker', 49)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="img/cooker.jpg" alt="Cooker" />
+        <h2>Pressure Cooker</h2>
+        <p>$49</p>
+        <button onclick="addToCart('Pressure Cooker', 49)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="img/cooker.jpg" alt="Cooker" />
+        <h2>Pressure Cooker</h2>
+        <p>$49</p>
+        <button onclick="addToCart('Pressure Cooker', 49)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="img/cooker.jpg" alt="Cooker" />
+        <h2>Pressure Cooker</h2>
+        <p>$49</p>
+        <button onclick="addToCart('Pressure Cooker', 49)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="img/cooker.jpg" alt="Cooker" />
+        <h2>Pressure Cooker</h2>
+        <p>$49</p>
+        <button onclick="addToCart('Pressure Cooker', 49)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="img/cooker.jpg" alt="Cooker" />
+        <h2>Pressure Cooker</h2>
+        <p>$49</p>
+        <button onclick="addToCart('Pressure Cooker', 49)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="img/cooker.jpg" alt="Cooker" />
+        <h2>Pressure Cooker</h2>
+        <p>$49</p>
+        <button onclick="addToCart('Pressure Cooker', 49)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="img/cooker.jpg" alt="Cooker" />
+        <h2>Pressure Cooker</h2>
+        <p>$49</p>
+        <button onclick="addToCart('Pressure Cooker', 49)">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Amazon </p>
+  </footer>
+  <script src="script.js"></script>
+  <div id="toast" class="toast"></div>
+</body>
+</html>

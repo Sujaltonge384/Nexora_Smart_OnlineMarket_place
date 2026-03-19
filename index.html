@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon </title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+
+  <!-- Left: Logo -->
+  <div class="nav-left">
+    <a href="index.html" class="logo">Nexora</a>
+  </div>
+
+  <!-- Center: Search -->
+  <div class="nav-center">
+    <div class="search-bar">
+      <input type="text" placeholder="Search Products" id="searchInput" />
+      <button onclick="searchProducts()">Search</button>
+    </div>
+  </div>
+
+  <a href="orders.html" style="padding-right: 40px; text-decoration: none;">My Orders</a>
+
+  <!-- Right: Cart + Auth -->
+  <div class="nav-right">
+    <a href="cart.html" class="cart-link">
+      Cart (<span id="cart-count">0</span>)
+    </a>
+
+     <div id="authSection">
+    <a href="login.html" class="nav-item">Login</a>
+    <a href="register.html" class="nav-item">Register</a>
+  </div>
+  </div>
+
+</header>
+
+
+  <nav class="categories">
+    <a href="Nexora_Daily/Daily.html">Nexora Daily</a>
+    <a href="bestseller.html">Bestseller</a>
+    <a href="todays_deal.html">Today's Deal</a>
+    <a href="mobile.html">Mobile</a>
+    <a href="Computers.html">Computers</a>
+    <a href="electronics.html">Electronics</a>
+    <a href="fashion.html">Fashion</a>
+    <a href="home.html">Home & Kitchen</a>
+    <a href="books.html">Books</a>
+    <a href="toys.html">Toys & Games</a>
+    <a href="Nexora_pay.html">Nexora Pay</a>
+    <a href="car_bikes.html">Cars & Bikes</a>
+    <a href="customer_service.html">Customer Service</a>
+  </nav>
+
+ <main>
+  <div class="carousel-container">
+    <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+
+    <div class="carousel-wrapper">
+      <div class="carousel-slides" id="carouselSlides">
+        <a href="fashion.html"><img src="assets/amazon-banner-1.jpg" alt="Banner 1" /></a>
+        <a href="mobile.html"><img src="assets/amazon-banner-2.jpg" alt="Banner 2" /></a>
+        <a href="bestseller.html"><img src="assets/amazon-banner-3.jpg" alt="Banner 3" /></a>
+        <a href="todays_deal.html"><img src="assets/amazon-banner-4.jpg" alt="Banner 4" /></a>
+      </div>
+    </div>
+
+    <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+  </div>
+
+
+
+
+  <section class="feature-panels">
+   <div class="product-panel">
+  <h3>Appliances for your home | Up to 55% off</h3>
+  <div class="panel-grid">
+    <div class="panel-item">
+      <img src="assets/Air Conditioners.jpg" alt="PS5 Digital">
+      <p>Air conditioners</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/Refigerators.jpg" alt="PS5 Disc">
+      <p>Refrigerators</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/Microwaves.jpg" alt="PS5 Fortnite">
+      <p>Microwaves</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/Washing machines.jpg" alt="Controller">
+      <p>Washing Machine</p>
+    </div>
+  </div>
+  <a href="#" class="see-more">See all deals</a>
+</div>
+
+
+    <div class="product-panel">
+  <h3>Revamp your home in style</h3>
+  <div class="panel-grid">
+    <div class="panel-item">
+      <img src="assets/cushion covers.jpg" alt="PS5 Digital">
+      <p>Cushion covers, bedsheets & more</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/decor.jpg" alt="PS5 Disc">
+      <p>Figurines, vases & more</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/home storage.jpg" alt="PS5 Fortnite">
+      <p>Home storage</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/lighting solutions.jpg" alt="Controller">
+      <p>Lighting solution</p>
+    </div>
+  </div>
+  <a href="#" class="see-more">See all deals</a>
+</div>
+
+  <div class="product-panel">
+  <h3>Get your desired TV screen size | Starting ₹6,999</h3>
+  <div class="panel-grid">
+    <div class="panel-item">
+      <img src="assets/Redmi tv.jpg" alt="PS5 Digital">
+      <p>Budget TVs | Save extra with No Cost EMI</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/mi tv.jpg" alt="PS5 Disc">
+      <p>4K TVs | Up to 24 months No cost EMI</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/sony tv.jpg" alt="PS5 Fortnite">
+      <p>Big Screens | Free installation</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/VW tv.jpg" alt="Controller">
+      <p>Ultra Premium TVs | Up to 50% off</p>
+    </div>
+  </div>
+  <a href="#" class="see-more">See all deals</a>
+</div>
+
+<div class="product-panel">
+  <h3>Sign in for your best experience</h3>
+    <div class="panel yellow">
+      <a href="login.html"><button>Sign in securely</button></a>
+    </div>
+</div>
+
+<div class="product-panel">
+  <h3>PlayStation 5 Slim & Accessories | No Cost EMI*</h3>
+  <div class="panel-grid">
+    <div class="panel-item">
+      <img src="assets/PS5 Slim digital edition.jpg" alt="PS5 Digital">
+      <p>PS5 Slim digital edition</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/PS5 Slim disc edition.jpg" alt="PS5 Disc">
+      <p>PS5 Slim disc edition</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/PS5 Slim Fortnite digital edition.jpg" alt="PS5 Fortnite">
+      <p>PS5 Slim Fortnite edition</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/PS5 Dualsense wireless controller.jpg" alt="Controller">
+      <p>DualSense Controller</p>
+    </div>
+  </div>
+  <a href="#" class="see-more">See all deals</a>
+</div>
+
+<div class="product-panel">
+  <h3>Under ₹499 | Deals on home improvement...</h3>
+  <div class="panel-grid">
+    <div class="panel-item">
+      <img src="assets/Cleaning supplies.jpg" alt="PS5 Digital">
+      <p>Under ₹199 | Cleaning supplies</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/Bathroom accessories.jpg" alt="PS5 Disc">
+      <p>Under ₹399 | Bathroom accessories</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/Home tools.jpg" alt="PS5 Fortnite">
+      <p>Under ₹499 | Home Tools</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/Wallpapers.jpg" alt="Controller">
+      <p>Under ₹299 | Wallpapers</p>
+    </div>
+  </div>
+  <a href="#" class="see-more">See all deals</a>
+</div>
+
+<div class="product-panel">
+  <h3>Starting ₹149 | Headphones</h3>
+  <div class="panel-grid">
+    <div class="panel-item">
+      <img src="assets/boat.jpg" alt="PS5 Digital">
+      <p>Starting ₹249 | boAt</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/Boult.jpg" alt="PS5 Disc">
+      <p>Starting ₹349 | boult</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/noise.jpg" alt="PS5 Fortnite">
+      <p>Starting ₹149 | Noise</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/zebronics.jpg" alt="Controller">
+      <p>Starting ₹149 | Zebronics</p>
+    </div>
+  </div>
+  <a href="#" class="see-more">See all deals</a>
+</div>
+
+<div class="product-panel">
+  <h3>Automotive essentials | Up to 60% off</h3>
+  <div class="panel-grid">
+    <div class="panel-item">
+      <img src="assets/cleaning accessories.jpg" alt="PS5 Digital">
+      <p>Cleaning accessories</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/Tyre & rim care.jpg" alt="PS5 Disc">
+      <p>Tyre & rim care</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/Helmets.jpg" alt="PS5 Fortnite">
+      <p>Helmets</p>
+    </div>
+    <div class="panel-item">
+      <img src="assets/Vacuum cleaner.jpg " alt="Controller">
+      <p>Vacuum cleaner</p>
+    </div>
+  </div>
+  <a href="#" class="see-more">See all deals</a>
+</div>
+
+<div class="scroll-panel" >
+  <h2>Related to items you've viewed <a href="#">See more</a></h2>
+
+  <div class="scroll-wrapper"  >
+    <button class="scroll-btn left" onclick="slideLeft('scroll-box-1')">❮</button>
+
+    <div class="scroll-container" id="scroll-box-1">
+      <div class="product-img"><img src="assets/ladder-1.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/ladder-2.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/ladder-3.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/ladder-4.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/ladder-5.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/ladder-6.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/ladder-7.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/ladder-8.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/ladder-9.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/ladder-.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/ladder-11.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/ladder-12.jpg" alt="Ladder 1" /></div>
+    </div>
+
+    <button class="scroll-btn right" onclick="slideRight('scroll-box-1')">❯</button>
+  </div>
+ </div>
+</section>
+
+<section  class="feature-panels">
+  <div class="scroll-panel">
+  <h2>Starting ₹70,348 | Ride into your next adventure<a href="#">See more</a></h2>
+
+  <div class="scroll-wrapper">
+    <button class="scroll-btn left" onclick="slideLeft('scroll-box-2')">❮</button>
+
+    <div class="scroll-container" id="scroll-box-2">
+      <div class="product-img"><img src="assets/Bike-1.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Bike-2.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Bike-3.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Bike-4.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Bike-5.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Bike-6.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Bike-7.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Bike-8.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Bike-9.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Bike-10.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Bike-11.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Bike-12.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Bike-13.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Bike-14.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Bike-15.jpg" alt="Ladder 1" /></div>
+    </div>
+
+    <button class="scroll-btn right" onclick="slideRight('scroll-box-2')">❯</button>
+  </div>
+ </div>
+</section>
+
+<section class="feature-panels">
+  <div class="product-scroll-section">
+    
+    <div class="product-card">
+      <h3>Best Sellers in Clothing & Accessories</h3>
+      <img src="assets/Allen solly tshirt-1.jpg" alt="Main product" class="main-product" />
+      <p>Allen Solly Men's Cotton Regular Fit Polo T-Shirt</p>
+      <div class="price">
+        ₹699.00 <span class="mrp">M.R.P: ₹1,099.00</span>
+      </div>
+      <div class="thumbnail-scroll">
+        <img src="assets/Allen solly tshirt-1.jpg" alt="shirt1" />
+        <img src="assets/van heusen tshirt -1.jpg" alt="shirt2" />
+        <img src="assets/lymio short.jpg" alt="shirt3" />
+        <img src="assets/goshiki kurti.jpg" alt="shirt4" />
+      </div>
+    </div>
+
+    <div class="product-card">
+      <h3>Up to 60% off | Curated kitchen products</h3>
+      <img src="assets/bottel.jpg" alt="Bottle" class="main-product" />
+      <p>Aquaminder Smart Water Bottle</p>
+      <div class="price">
+        ₹1,299.00 <span class="mrp">M.R.P: ₹1,999.00</span>
+      </div>
+      <div class="thumbnail-scroll">
+        <img src="assets/bottel.jpg" alt="bottle1" />
+        <img src="assets/well set.jpg" alt="bottle2" />
+        <img src="assets/Hikajal.jpg" alt="bottle3" />
+        <img src="assets/knife.jpg" alt="bottle3" />
+
+      </div>
+    </div>
+
+    <div class="product-card">
+      <h3>Best Sellers in Sports, Fitness & Outdoors</h3>
+      <img src="assets/dumbell.jpg" alt="Bottle" class="main-product" />
+      <p>Lifelong PVC Hex Dumbbells Pack of 2 (5kg*2) Black Color</p>
+      <div class="price">
+        ₹509.00 <span class="mrp">M.R.P: ₹1,000.00</span>
+      </div>
+      <div class="thumbnail-scroll">
+        <img src="assets/dumbell.jpg" alt="bottle1" />
+        <img src="assets/sket scooty.jpg" alt="bottle2" />
+        <img src="assets/yoga mat-1.jpg" alt="bottle3" />
+        <img src="assets/yoga mat-2.jpg" alt="bottle3" />
+      </div>
+    </div>
+
+    <div class="product-card">
+      <h3>Up to 40% off | Inverter batteries from stores near you</h3>
+      <img src="assets/battery-1.jpg" alt="Bottle" class="main-product" />
+      <p>Aquaminder Smart Water Bottle</p>
+      <div class="price">
+        ₹27,299.00 <span class="mrp">M.R.P: ₹40,600.00</span>
+      </div>
+      <div class="thumbnail-scroll">
+        <img src="assets/battery-1.jpg" alt="bottle1" />
+        <img src="assets/battery-2.jpg" alt="bottle2" />
+        <img src="assets/battery-3.jpg" alt="bottle3" />
+        <img src="assets/battery-4.jpg" alt="bottle3" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="feature-panels" >
+  <!-- Card 1 -->
+  <div class="product-card">
+    <h3>Pick up where you left off</h3>
+    <img src="assets/macbook.jpg" alt="MacBook" class="main-product">
+    <p>Apple MacBook Air Laptop: M1 chip, 13.3-inch, 8GB RAM</p>
+    <div class="price">
+      ₹58,990 <span class="mrp">M.R.P: ₹74,900</span>
+    </div>
+    <div class="thumbnail-scroll">
+      <img src="assets/macbook.jpg" alt="">
+      <img src="assets/cover.jpg" alt="">
+      <img src="assets/iphone 16e.jpg" alt="">
+      <img src="assets/macbook air.jpg" alt="">
+    </div>
+    <a href="#" class="see-more">See more</a>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="product-card">
+    <h3>Keep shopping for</h3>
+    <img src="assets/scroll-labber-1.jpg" alt="Ladder" class="main-product">
+    <p>Bathla Prime 5 - Foldable Aluminium Ladder for Home</p>
+    <div class="price">
+      ₹3,897 <span class="mrp">M.R.P: ₹8,699</span>
+    </div>
+    <div class="thumbnail-scroll">
+      <img src="assets/scroll-labber-1.jpg" alt="">
+      <img src="assets/scroll-labber-2.jpg" alt="">
+      <img src="assets/scroll-labber-3.jpg" alt="">
+      <img src="assets/scroll-labber-4.jpg" alt="">
+    </div>
+    <a href="#" class="see-more">See more</a>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="product-panel">
+    <h3>Customers’ Most-Loved products</h3>
+    <div class="panel-grid">
+      <div class="panel-item">
+        <img src="assets/ladder-1.jpg" alt="Product 1">
+      </div>
+      <div class="panel-item">
+        <img src="assets/ladder-8.jpg" alt="Product 2">
+      </div>
+      <div class="panel-item">
+        <img src="assets/ladder-3.jpg" alt="Product 1">
+      </div>
+      <div class="panel-item">
+        <img src="assets/ladder-4.jpg" alt="Product 2">
+      </div>
+    </div>
+    <a href="#" class="see-more">Explore more</a>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="product-panel">
+    <h3>Customers’ Most-Loved Fashion for you</h3>
+    <div class="panel-grid">
+      <div class="panel-item">
+        <img src="assets/tshirt-1.jpg" alt="Shirt">
+      </div>
+      <div class="panel-item">
+        <img src="assets/shoes.jpg" alt="Shoes">
+      </div>
+      <div class="panel-item">
+        <img src="assets/tshirt-2.jpg" alt="Shoes">
+      </div>
+      <div class="panel-item">
+        <img src="assets/tshirt-3.jpg" alt="Shoes">
+      </div>
+    </div>
+    <a href="#" class="see-more">Explore more</a>
+  </div>
+
+  <div class="scroll-panel">
+  <h2>Up to 60% off | Trending products from Emerging Businesses <a href="#">See more</a></h2>
+
+  <div class="scroll-wrapper">
+    <button class="scroll-btn left" onclick="slideLeft('scroll-box-3')">❮</button>
+
+    <div class="scroll-container" id="scroll-box-3">
+      <div class="product-img"><img src="assets/Scroll_3-1.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-2.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-3.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-4.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-5.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-6.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-7.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-8.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-9.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-10.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-11.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-12.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-13.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-14.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-15.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-16.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-17.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_3-18.jpg" alt="Ladder 1" /></div>
+    </div>
+
+    <button class="scroll-btn right" onclick="slideRight('scroll-box-3')">❯</button>
+  </div>
+ </div>
+ </section>
+
+ <section class="feature-panels">
+
+ <div class="scroll-panel">
+  <h2>Up to 80% off | Treasures from artisans <a href="#">See more</a></h2>
+
+  <div class="scroll-wrapper">
+    <button class="scroll-btn left" onclick="slideLeft('scroll-box-4')">❮</button>
+
+    <div class="scroll-container" id="scroll-box-4">
+      <div class="product-img"><img src="assets/Scroll_4-1.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_4-2.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_4-3.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_4-4.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_4-5.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_4-6.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_4-7.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_4-8.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_4-9.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_4-10.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_4-11.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_4-12.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_4-13.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_4-14.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_4-15.jpg" alt="Ladder 1" /></div>
+    </div>
+
+    <button class="scroll-btn right" onclick="slideRight('scroll-box-4')">❯</button>
+  </div>
+ </div>
+</section>
+
+<section class="feature-panels">
+  <div class="product-scroll-section">
+    
+    <div class="product-card">
+      <h3>Pick up where you left off</h3>
+      <img src="assets/macbook.jpg" alt="Main product" class="main-product" />
+      <p>Apple MacBook Air Laptop: Apple M1 chip, 13.3-inch/33.74 cm Retina Display, 8GB RAM, 256GB S…</p>
+      <div class="price">
+        ₹58,990 <span class="mrp">M.R.P: ₹74,900.00</span>
+      </div>
+      <div class="thumbnail-scroll">
+        <img src="assets/macbook.jpg" alt="shirt1" />
+        <img src="assets/cover.jpg" alt="shirt2" />
+        <img src="assets/iphone 16e.jpg" alt="shirt3" />
+        <img src="assets/macbook air.jpg" alt="shirt4" />
+      </div>
+    </div>
+
+    <div class="product-card">
+      <h3>Keep shopping for</h3>
+      <img src="assets/scroll-labber-1.jpg" alt="Bottle" class="main-product" />
+      <p>Houza 5-Step Foldable Aluminium Ladder for Home | Anti-Slip Shoes | Slip Prevention Steps | Durable,…</p>
+      <div class="price">
+        ₹1,299.00 <span class="mrp">M.R.P: ₹1,999.00</span>
+      </div>
+      <div class="thumbnail-scroll">
+        <img src="assets/scroll-labber-1.jpg" alt="bottle1" />
+        <img src="assets/scroll-labber-2.jpg" alt="bottle2" />
+        <img src="assets/scroll-labber-3.jpg" alt="bottle3" />
+        <img src="assets/scroll-labber-4.jpg" alt="bottle3" />
+      </div>
+    </div>
+
+    <div class="product-card">
+      <h3>Customers’ Most-Loved products</h3>
+      <img src="img/bottle-main.jpg" alt="Bottle" class="main-product" />
+      <p>Aquaminder Smart Water Bottle</p>
+      <div class="price">
+        ₹1,299.00 <span class="mrp">M.R.P: ₹1,999.00</span>
+      </div>
+      <div class="thumbnail-scroll">
+        <img src="img/bottle1.jpg" alt="bottle1" />
+        <img src="img/bottle2.jpg" alt="bottle2" />
+        <img src="img/bottle3.jpg" alt="bottle3" />
+      </div>
+    </div>
+
+    <div class="product-card">
+      <h3>Up to 60% off | Curated kitchen products</h3>
+      <img src="img/bottle-main.jpg" alt="Bottle" class="main-product" />
+      <p>Aquaminder Smart Water Bottle</p>
+      <div class="price">
+        ₹1,299.00 <span class="mrp">M.R.P: ₹1,999.00</span>
+      </div>
+      <div class="thumbnail-scroll">
+        <img src="img/bottle1.jpg" alt="bottle1" />
+        <img src="img/bottle2.jpg" alt="bottle2" />
+        <img src="img/bottle3.jpg" alt="bottle3" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="feature-panels">
+
+ <div class="scroll-panel">
+  <h2>Up to 60% off | Trending products from women-led brands <a href="#">See more</a></h2>
+
+  <div class="scroll-wrapper">
+    <button class="scroll-btn left" onclick="slideLeft('scroll-box-5')">❮</button>
+
+    <div class="scroll-container" id="scroll-box-5">
+      <div class="product-img"><img src="assets/Scroll_5-1.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_5-2.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_5-3.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_5-4.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_5-5.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_5-6.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_5-7.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_5-8.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_5-9.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_5-10.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_5-11.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_5-12.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_5-13.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_5-14.jpg" alt="Ladder 1" /></div>
+      <div class="product-img"><img src="assets/Scroll_5-15.jpg" alt="Ladder 1" /></div>
+    </div>
+
+    <button class="scroll-btn right" onclick="slideRight('scroll-box-5')">❯</button>
+  </div>
+ </div>
+</section>
+
+
+<div class="chat-box">
+  <input type="text" id="chatInput" placeholder="Ask Nexora AI..." />
+  <button onclick="sendChat()">Send</button>
+</div>
+
+
+
+</main>
+  
+  <!-- Sign In Recommendation Banner -->
+<div class="signin-banner">
+  <hr>
+  <h2>See personalized recommendations</h2>
+ <a href="login.html"><button class="signin-button">Sign in</button></a>
+  <p>New customer? <a href="login.html">Start here.</a></p>
+  <hr>
+</div>
+
+<!-- Back to Top -->
+<div class="back-to-top">
+  <a href="index.html">Back to top</a>
+</div>
+<div id="toast" class="toast"></div>
+
+<!-- Footer -->
+<footer class="amazon-footer">
+  <div class="footer-columns">
+    <div class="footer-column">
+      <h4>Get to Know Us</h4>
+      <ul>
+        <li><a href="#">About Nexora</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press Releases</a></li>
+        <li><a href="#">Amazon Science</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Connect with Us</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Make Money with Us</h4>
+      <ul>
+        <li><a href="#">Sell on Nexora</a></li>
+        <li><a href="#">Sell under Nexora Accelerator</a></li>
+        <li><a href="#">Protect and Build Your Brand</a></li>
+        <li><a href="#">Amazon Global Selling</a></li>
+        <li><a href="#">Supply to Nexora</a></li>
+        <li><a href="#">Become an Affiliate</a></li>
+        <li><a href="#">Fulfilment by Nexora</a></li>
+        <li><a href="#">Advertise Your Products</a></li>
+        <li><a href="#">Nexora Pay on Merchants</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Let Us Help You</h4>
+      <ul>
+        <li><a href="#">Your Account</a></li>
+        <li><a href="#">Returns Centre</a></li>
+        <li><a href="#">Recalls and Product Safety Alerts</a></li>
+        <li><a href="#">100% Purchase Protection</a></li>
+        <li><a href="#">Amazon App Download</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-legal">
+  <p>
+    <a href="#">Conditions of Use & Sale</a>
+    <a href="#">Privacy Notice</a>
+    <a href="#">Interest-Based Ads</a>
+  </p>
+  <p>© 2025-2026, Nexora.com, Inc. or its affiliates</p>
+</div>
+</footer>
+
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+   <script src="login-register.js"></script>
+<script>
+
+
+function logout() {
+  localStorage.clear();
+  window.location.reload();
+}
+</script>
+
+
+</body>
+</html>

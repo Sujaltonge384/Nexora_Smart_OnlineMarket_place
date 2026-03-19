@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Orders</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>My Orders</h2>
+
+<div id="ordersContainer"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", loadOrders);
+
+async function loadOrders() {
+  const token = localStorage.getItem("token");
+
+  const res = await fetch("http://localhost:5000/api/order/my-orders", {
+    headers: { "Authorization": token }
+  });
+
+  const orders = await res.json();
+  const container = document.getElementById("ordersContainer");
+
+  container.innerHTML = "";
+
+  orders.forEach(order => {
+    container.innerHTML += `
+      <div class="order-card">
+        <h3>Order ID: ${order._id}</h3>
+        <p>Total: ₹${order.totalAmount}</p>
+        <p>Estimated Delivery: ${new Date(order.estimatedDelivery).toDateString()}</p>
+        <p>Status: ${order.status}</p>
+        ${getTrackingBar(order.status)}
+      </div>
+    `;
+  });
+}
+
+function getTrackingBar(status) {
+
+  const steps = ["Ordered", "Shipped", "Out for Delivery", "Delivered"];
+  let activeIndex = steps.indexOf(status);
+
+  let html = `<div class="tracking-bar">`;
+
+  steps.forEach((step, index) => {
+    html += `
+      <div class="track-step ${index <= activeIndex ? "active" : ""}">
+        <div class="circle"></div>
+        <span>${step}</span>
+      </div>
+    `;
+  });
+
+  html += `</div><div class="truck">🚚</div>`;
+  return html;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2 class="payment-title">Checkout</h2>
+
+<div class="payment-container">
+
+  <label>Select Payment Method</label>
+  <select id="paymentMethod" onchange="togglePaymentFields()">
+    <option value="COD">Cash on Delivery</option>
+    <option value="UPI">UPI</option>
+    <option value="Card">Credit/Debit Card</option>
+  </select>
+
+  <!-- UPI SECTION -->
+  <div id="upiSection" class="hidden">
+    <input type="text" id="upiId" placeholder="Enter UPI ID (example@upi)">
+  </div>
+
+  <!-- CARD SECTION -->
+  <div id="cardSection" class="hidden">
+    <input type="text" id="cardNumber" placeholder="Card Number">
+    <div class="card-row">
+      <input type="text" id="expiry" placeholder="MM/YY">
+      <input type="text" id="cvv" placeholder="CVV">
+    </div>
+  </div>
+
+  <button onclick="placeOrder()">Pay Now</button>
+
+</div>
+
+<script>
+
+function togglePaymentFields() {
+  const method = document.getElementById("paymentMethod").value;
+
+  document.getElementById("upiSection").classList.add("hidden");
+  document.getElementById("cardSection").classList.add("hidden");
+
+  if (method === "UPI") {
+    document.getElementById("upiSection").classList.remove("hidden");
+  }
+
+  if (method === "Card") {
+    document.getElementById("cardSection").classList.remove("hidden");
+  }
+}
+
+
+async function placeOrder() {
+
+  const token = localStorage.getItem("token");
+  if (!token) {
+    alert("Please login first");
+    return;
+  }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const type = urlParams.get("type");
+
+  if (!type) {
+    alert("Checkout type missing");
+    return;
+  }
+
+  const method = document.getElementById("paymentMethod").value;
+
+  const res = await fetch("http://localhost:5000/api/order/checkout", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": token
+    },
+    body: JSON.stringify({
+      paymentMethod: method.toLowerCase(),
+      type: type.toLowerCase()
+    })
+  });
+
+  const data = await res.json();
+
+  if (res.ok) {
+    window.location.href = "success.html";
+  } else {
+    alert(data.message);
+  }
+}
+</script>
+
+</body>
+</html>

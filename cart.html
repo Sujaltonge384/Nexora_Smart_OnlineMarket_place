@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | Amazon </title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="navbar">
+
+  <!-- Left: Logo -->
+  <div class="nav-left">
+    <a href="index.html" class="logo">Nexora</a>
+  </div>
+
+  <!-- Center: Search -->
+  <div class="nav-center">
+    <div class="search-bar">
+      <input type="text" placeholder="Search Products" id="searchInput" />
+      <button onclick="searchProducts()">Search</button>
+    </div>
+  </div>
+
+  <a href="orders.html" style="padding-right: 40px; text-decoration: none;">My Orders</a>
+
+  <!-- Right: Cart + Auth -->
+ 
+    </div>
+  </header>
+
+  <nav class="categories">
+    <a href="Nexora_Daily/Daily.html">Nexora Daily</a>
+    <a href="bestseller.html">Bestseller</a>
+    <a href="todays_deal.html">Today's Deal</a>
+    <a href="mobile.html">Mobile</a>
+    <a href="Computers.html">Computers</a>
+    <a href="electronics.html">Electronics</a>
+    <a href="fashion.html">Fashion</a>
+    <a href="home.html">Home & Kitchen</a>
+    <a href="books.html">Books</a>
+    <a href="toys.html">Toys & Games</a>
+    <a href="Nexora_pay.html">Nexora Pay</a>
+    <a href="car_bikes.html">Cars & Bikes</a>
+    <a href="customer_service.html">Customer Service</a>
+  </nav>
+
+  <main>
+
+  <!-- 🛒 SHOPPING CART SECTION -->
+  <section class="cart-section">
+    <h2>🛒 Shopping Cart</h2>
+
+    <div id="shoppingCart" class="products"></div>
+
+    <div class="cart-summary">
+      <p><strong>Shopping Total:</strong> ₹
+        <span id="shoppingTotal">0.00</span>
+      </p>
+
+      <button onclick="checkoutSection('shopping')" class="checkout-btn">
+        Pay for Shopping Items
+      </button>
+    </div>
+  </section>
+
+
+  <!-- 🥬 FRESH CART SECTION -->
+  <section class="cart-section fresh-section">
+    <h2>🥬 Nexora Daily</h2>
+
+    <div id="freshCart" class="products"></div>
+
+    <div class="cart-summary">
+      <p><strong>Fresh Total:</strong> ₹
+        <span id="freshTotal">0.00</span>
+      </p>
+
+      <button onclick="checkoutSection('fresh')" class="checkout-btn fresh-btn">
+        Pay for Fresh Items
+      </button>
+    </div>
+  </section>
+
+
+  <!-- 💰 PAY FOR ALL -->
+  <section class="cart-section all-section">
+    <hr>
+
+    <div class="cart-summary">
+      <p><strong>Grand Total:</strong> ₹
+        <span id="grandTotal">0.00</span>
+      </p>
+
+      <button onclick="checkoutSection('all')" class="checkout-btn all-btn">
+        Pay for All Items
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<div id="toast" class="toast"></div>
+
+<footer>
+  <p>&copy; 2025 Amazon</p>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+
+  const token = localStorage.getItem("token");
+
+  if (!token) {
+    window.location.href = "login.html";
+    return;
+  }
+
+  loadCart();
+});
+
+async function loadCart() {
+
+  const token = localStorage.getItem("token");
+
+  const res = await fetch("http://localhost:5000/api/cart", {
+    headers: { "Authorization": token }
+  });
+
+  const cart = await res.json();
+  console.log(cart);
+
+  const shoppingDiv = document.getElementById("shoppingCart");
+  const freshDiv = document.getElementById("freshCart");
+
+  const shoppingTotalSpan = document.getElementById("shoppingTotal");
+  const freshTotalSpan = document.getElementById("freshTotal");
+  const grandTotalSpan = document.getElementById("grandTotal");
+
+  shoppingDiv.innerHTML = "";
+  freshDiv.innerHTML = "";
+
+  let shoppingTotal = 0;
+  let freshTotal = 0;
+
+  // 🛒 SHOPPING ITEMS
+  cart.shopping.forEach(item => {
+
+    shoppingTotal += item.price * item.quantity;
+shoppingDiv.innerHTML += `
+  <div class="cart-card">
+
+    <div class="cart-left">
+      <img src="${item.image}" 
+           alt="${item.name}" 
+           class="cart-img">
+    </div>
+
+    <div class="cart-right">
+      <h3 class="cart-title">${item.name}</h3>
+
+      <p class="cart-desc">
+        ${item.description }
+      </p>
+
+      <p class="cart-price">Price: ₹${item.price}</p>
+
+      <div class="qty-control">
+        <button onclick="updateQuantity('${item.name}', 'decrease', 'shopping')">−</button>
+        <span>${item.quantity}</span>
+        <button onclick="updateQuantity('${item.name}', 'increase', 'shopping')">+</button>
+      </div>
+
+      <p class="cart-subtotal">
+        Subtotal: ₹${item.price * item.quantity}
+      </p>
+
+    </div>
+
+  </div>
+`;
+  });
+
+  // 🥬 FRESH ITEMS
+ // 🥬 FRESH ITEMS
+cart.fresh.forEach(item => {
+
+  freshTotal += item.price * item.quantity;
+
+  freshDiv.innerHTML += `
+    <div class="cart-card">
+
+      <div class="cart-left">
+        <img src="${item.image || 'assets/images/default.jpg'}" 
+             alt="${item.name}" 
+             class="cart-img">
+      </div>
+
+      <div class="cart-right">
+        <h3 class="cart-title">${item.name}</h3>
+
+        <p class="cart-desc">
+          ${item.description || 'Fresh product from Nexora Daily'}
+        </p>
+
+        <p class="cart-price">Price: ₹${item.price}</p>
+
+        <div class="qty-control">
+          <button onclick="updateQuantity('${item.name}', 'decrease', 'fresh')">−</button>
+          <span>${item.quantity}</span>
+          <button onclick="updateQuantity('${item.name}', 'increase', 'fresh')">+</button>
+        </div>
+
+        <p class="cart-subtotal">
+          Subtotal: ₹${item.price * item.quantity}
+        </p>
+
+      </div>
+
+    </div>
+  `;
+});
+  shoppingTotalSpan.innerText = shoppingTotal.toFixed(2);
+  freshTotalSpan.innerText = freshTotal.toFixed(2);
+  grandTotalSpan.innerText = (shoppingTotal + freshTotal).toFixed(2);
+}
+
+async function updateQuantity(name, action, type) {
+
+  const token = localStorage.getItem("token");
+
+  await fetch("http://localhost:5000/api/cart/update", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": token
+    },
+    body: JSON.stringify({ name, action, type })
+  });
+
+  loadCart();
+}
+function checkoutSection(type) {
+  window.location.href = `payment.html?type=${type}`;
+}
+
+function checkoutAll() {
+  window.location.href = "payment.html?type=all";
+}
+</script>
+
+
+
+</body>
+</html>

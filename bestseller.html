@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bestseller | Nexora </title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="navbar">
+
+  <!-- Left: Logo -->
+  <div class="nav-left">
+    <a href="index.html" class="logo">Nexora</a>
+  </div>
+
+  <!-- Center: Search -->
+  <div class="nav-center">
+    <div class="search-bar">
+      <input type="text" placeholder="Search Products" id="searchInput" />
+      <button onclick="searchProducts()">Search</button>
+    </div>
+  </div>
+
+  <a href="orders.html" style="padding-right: 40px; text-decoration: none;">My Orders</a>
+
+  <!-- Right: Cart + Auth -->
+  <div class="nav-right">
+    <a href="cart.html" class="cart-link">
+      Cart (<span id="cart-count">0</span>)
+    </a>
+
+     <div id="authSection">
+    <a href="login.html" class="nav-item">Login</a>
+    <a href="register.html" class="nav-item">Register</a>
+  </div>
+  </div>
+
+</header>
+  <nav class="categories">
+     <a href="Nexora_Daily/Daily.html">Nexora Daily</a>
+    <a href="bestseller.html">Bestseller</a>
+    <a href="todays_deal.html">Today's Deal</a>
+    <a href="mobile.html">Mobile</a>
+    <a href="Computers.html">Computers</a>
+    <a href="electronics.html">Electronics</a>
+    <a href="fashion.html">Fashion</a>
+    <a href="home.html">Home & Kitchen</a>
+    <a href="books.html">Books</a>
+    <a href="toys.html">Toys & Games</a>
+    <a href="Nexora_pay.html">Nexora Pay</a>
+    <a href="car_bikes.html">Cars & Bikes</a>
+    <a href="customer_service.html">Customer Service</a>
+  </nav>
+
+  <main>
+    <h1>Nexora BestSeller</h1>
+    <h2>BestSeller in Mobiles</h2>
+    <div class="products">
+      <div class="product">
+        <img src="assets/Galaxy_s26_ultra.jpg" alt="Samsung Galaxy S23" />
+        <h2>Samsung Galaxy S26 Ultra 5G | 200px Main Camera |1TB </h2>
+        <p>Rs. 1,44,999</p>
+         <button onclick="addToCart('Samsung Galaxy S26 Ultra 5G',
+         14999,
+         'assets/Galaxy_s26_ultra.jpg',
+        'Cobalt Violet, 12GB RAM, 512GB Storage', 
+        'shopping'
+        )">Add to Cart</button>
+      </div>
+
+       <div class="product">
+        <img src="assets/iphone_17_promax.jpg " alt="Samsung Galaxy S23" />
+        <h2>iPhone 17 Pro Max 1 TB | A19 Pro Chip | Cosmic Orange</h2>
+        <p>Rs. 1,89,999</p>
+         <button onclick="addToCart('iPhone 17 Pro Max 1 TB',
+         189999,
+         'assets/iphone_17_promax.jpg',
+        'Cosmic Orange, 16GB RAM, 1TB Storge', 'shopping'
+        )">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="assets/IQOO_15.jpg" alt="Redmi Note 11" />
+        <h2>iQOO 15 | Fastest Snapdragon 8 Elite Gen 5 Processor</h2>
+        <p>Rs. 74,999</p>
+        <button onclick="addToCart('iQOO 15 ',
+        '74999',
+        'assets/IQOO_15.jpg',
+        'Legend, 12GB RAM, 256GB Storage', 
+        'shopping'
+        )">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="assets/Motorola edge 50 pro.jpeg " alt="Samsung Galaxy S23" />
+        <h2>Motorola Edge 50 pro with 144Hz | Sillicon Vegan Leather</h2>
+        <p>Rs. 41,999</p>
+         <button onclick="addToCart('Motorola Edge 50 pro',
+         41999,
+         'assets/Motorola edge 50 pro.jpeg',
+        'Luxe Lavender, 12GB RAM, 256GB Storge', 'shopping'
+        )">Add to Cart</button>
+      </div>
+
+     <div class="product">
+        <img src="assets/google pixel 10 fold.jfif" alt="Redmi Note 11" />
+        <h2>Google Pixel 10 Pro Fold (Moonstone, 256 GB) (16 GB RAM)</h2>
+        <p>Rs. 1,47,622</p>
+       <button onclick="addToCart('Google Pixel 10 Pro Fold ',
+        147622,
+        'assets/google pixel 10 fold.jfif',
+        'Moonstone, 16GB RAM, 256GB Storge', 
+        'shopping'
+        )">Add to Cart</button>
+      </div>
+
+    </div>
+
+    <h2>BestSeller in Mobiles</h2>
+    <div class="products">
+      <div class="product">
+        <img src="img/laptop.jpg" alt="Laptop" />
+        <h2>Laptop</h2>
+        <p>$999</p>
+        <button onclick="addToCart('Laptop', 999)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="img/laptop.jpg" alt="Laptop" />
+        <h2>Laptop</h2>
+        <p>$999</p>
+        <button onclick="addToCart('Laptop', 999)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="img/laptop.jpg" alt="Laptop" />
+        <h2>Laptop</h2>
+        <p>$999</p>
+        <button onclick="addToCart('Laptop', 999)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="img/laptop.jpg" alt="Laptop" />
+        <h2>Laptop</h2>
+        <p>$999</p>
+        <button onclick="addToCart('Laptop', 999)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="img/laptop.jpg" alt="Laptop" />
+        <h2>Laptop</h2>
+        <p>$999</p>
+        <button onclick="addToCart('Laptop', 999)">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Amazon </p>
+  </footer>
+  <script src="script.js"></script>
+  <div id="toast" class="toast"></div>
+</body>
+</html>

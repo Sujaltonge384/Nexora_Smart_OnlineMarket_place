@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computers | Amazon </title>
+  <link rel="stylesheet" href="\styles.css" />
+   <link rel="stylesheet" href="Electronic.css" />
+</head>
+<body>
+    <header class="navbar">
+
+  <!-- Left: Logo -->
+  <div class="nav-left">
+    <a href="\index.html" class="logo">Nexora</a>
+  </div>
+
+  <!-- Center: Search -->
+  <div class="nav-center">
+    <div class="search-bar">
+      <input type="text" placeholder="Search Products" id="searchInput" />
+      <button onclick="searchProducts()">Search</button>
+    </div>
+  </div>
+
+  <a href="\orders.html" style="padding-right: 40px; text-decoration: none;">My Orders</a>
+
+  <!-- Right: Cart + Auth -->
+  <div class="nav-right">
+    <a href="\cart.html" class="cart-link">
+      Cart (<span id="cart-count">0</span>)
+    </a>
+
+     <div id="authSection">
+    <a href="\login.html" class="nav-item">Login</a>
+    <a href="\register.html" class="nav-item">Register</a>
+  </div>
+  </div>
+
+</header>
+  <nav class="categories">
+    <a href="..\Nexora_Daily/Daily.html">Nexora Daily</a>
+    <a href="\bestseller.html">Bestseller</a>
+    <a href="\todays_deal.html">Today's Deal</a>
+    <a href="\mobile.html">Mobile</a>
+    <a href="\Computers.html">Computers</a>
+    <a href="\electronics.html">Electronics</a>
+    <a href="\fashion.html">Fashion</a>
+    <a href="\home.html">Home & Kitchen</a>
+    <a href="\books.html">Books</a>
+    <a href="\toys.html">Toys & Games</a>
+    <a href="\Nexora_pay.html">Nexora Pay</a>
+    <a href="\car_bikes.html">Cars & Bikes</a>
+    <a href="\customer_service.html">Customer Service</a>
+  </nav>
+
+  <nav class="computers-nav">
+    <a style="font-weight: 700; size: 40px;">Computers</a>
+    <a href="Laptop.html">Laptop</a>
+    <a href="Keyboards.html">Keyboards</a>
+    <a href="Gaming_Accessories.html">Gaming Accessories</a>
+    <a href="Tablets.html">Tablets</a>
+    <a href="Moniters.html">Moniters</a>
+    <a href="Mouse.html">Mouse</a>
+    <a href="Cpu_Accessories.html">Cpu Accessories</a>
+    <a href="Computer_Peripherals.html">Computer Peripherals</a>
+    <a href="Cameras.html">Cameras</a>
+    <a href="Tvs.html">TVs</a>
+    <a href="Watches.html">Watches</a>
+    <a href="Audio.html">Audio</a>
+  </nav>
+
+<main style="background-color: white;">
+
+<section>
+ <div >
+    <h2>What are you looking for ?</h2>
+ <div class="audio-grid">
+   <a href="Audio.html" >
+    <div class="audio-continer" style="background-color: rgb(33, 34, 34) ;">
+    <h2 style="color: white;">Headphones</h2>
+   </div>
+   </a>
+
+   <a href="speaker.html" >
+    <div class="audio-continer">
+    <h2>Speakers</h2>
+   </div>
+  </a>
+
+</div>
+
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Shop by categories</h2>
+
+<div class="Headphones-grid">
+
+  <a href="">
+    <img src="Electronics_Img/premium_headphones.png">
+  </a>
+
+  <a href="">
+    <img src="Electronics_Img/Bluetooth_earband.png">
+  </a>
+
+  <a href="">
+    <img src="Electronics_Img/Earbuds.png">
+  </a>
+
+  <a href="">
+    <img src="Electronics_Img/Gaming_heacdphones.png">
+  </a>
+
+  <a href="">
+    <img src="Electronics_Img/Wired_headphones.png">
+  </a>
+</div>
+
+</section>
+
+<section class="amazon-slider-section" >
+   
+  <div class="amazon-slider-container-white" style="border: none; background-color: rgb(0, 162, 255);">
+   <h2>Top Deals</h2>
+   <hr>
+    <button class="amazon-arrow left" onclick="slideLeft('Computer_Peripherals-slider-1')">&#10094;</button>
+
+    <div class="amazon-slider" id="Computer_Peripherals-slider-1">
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse2.jpg">
+        <div class="card-info">
+          <p class="card-title">Portronics Toad Bluetooth Mouse</p>
+          <p class="card-price">₹599 <span>₹1,499</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse3.jpg">
+        <div class="card-info">
+          <p class="card-title">HP M290 Wireless Mouse</p>
+          <p class="card-price">₹499 <span>₹1,199</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/watch1.jpg">
+        <div class="card-info">
+          <p class="card-title">Noise Twist Smartwatch</p>
+          <p class="card-price">₹2,499 <span>₹5,999</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/watch2.jpg">
+        <div class="card-info">
+          <p class="card-title">Boat Wave Sigma 3</p>
+          <p class="card-price">₹1,899 <span>₹3,999</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="amazon-arrow right" onclick="slideRight('Computer_Peripherals-slider-1')">&#10095;</button>
+
+  </div>
+</section>
+
+<section class="amazon-slider-section" id="webcams" >
+   
+  <div class="amazon-slider-container-black" style="border: none;">
+     <h2 style="color: white;">Web Cameras</h2>
+     <hr>
+     <button class="amazon-arrow left" onclick="slideLeft('Computer_Peripherals-slider-2')">&#10094;</button>
+
+    <div class="amazon-slider" id="Computer_Peripherals-slider-2">
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse2.jpg">
+        <div class="card-info">
+          <p class="card-title">Portronics Toad Bluetooth Mouse</p>
+          <p class="card-price">₹599 <span>₹1,499</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse3.jpg">
+        <div class="card-info">
+          <p class="card-title">HP M290 Wireless Mouse</p>
+          <p class="card-price">₹499 <span>₹1,199</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/watch1.jpg">
+        <div class="card-info">
+          <p class="card-title">Noise Twist Smartwatch</p>
+          <p class="card-price">₹2,499 <span>₹5,999</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/watch2.jpg">
+        <div class="card-info">
+          <p class="card-title">Boat Wave Sigma 3</p>
+          <p class="card-price">₹1,899 <span>₹3,999</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="amazon-arrow right" onclick="slideRight('Computer_Peripherals-slider-2')">&#10095;</button>
+
+  </div>
+
+</section>
+
+<section class="amazon-slider-section" id="cooling_pads">
+   
+  <div class="amazon-slider-container" style="border: none;">
+    <h2>Cooling Pad</h2>
+    <hr>
+    <button class="amazon-arrow left" onclick="slideLeft('Computer_Peripherals-slider-3')">&#10094;</button>
+
+    <div class="amazon-slider" id="Computer_Peripherals-slider-3">
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse2.jpg">
+        <div class="card-info">
+          <p class="card-title">Portronics Toad Bluetooth Mouse</p>
+          <p class="card-price">₹599 <span>₹1,499</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse3.jpg">
+        <div class="card-info">
+          <p class="card-title">HP M290 Wireless Mouse</p>
+          <p class="card-price">₹499 <span>₹1,199</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/watch1.jpg">
+        <div class="card-info">
+          <p class="card-title">Noise Twist Smartwatch</p>
+          <p class="card-price">₹2,499 <span>₹5,999</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/watch2.jpg">
+        <div class="card-info">
+          <p class="card-title">Boat Wave Sigma 3</p>
+          <p class="card-price">₹1,899 <span>₹3,999</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="amazon-arrow right" onclick="slideRight('Computer_Peripherals-slider-3')">&#10095;</button>
+
+  </div>
+
+</section>
+
+<section class="amazon-slider-section" id="cables" >
+   
+ <div class="amazon-slider-container-white" style="border: none;">
+   <h2>Cables</h2>
+    <hr>
+    <button class="amazon-arrow left" onclick="slideLeft('Computer_Peripherals-slider-4')">&#10094;</button>
+
+    <div class="amazon-slider" id="Computer_Peripherals-slider-4">
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse2.jpg">
+        <div class="card-info">
+          <p class="card-title">Portronics Toad Bluetooth Mouse</p>
+          <p class="card-price">₹599 <span>₹1,499</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse3.jpg">
+        <div class="card-info">
+          <p class="card-title">HP M290 Wireless Mouse</p>
+          <p class="card-price">₹499 <span>₹1,199</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/watch1.jpg">
+        <div class="card-info">
+          <p class="card-title">Noise Twist Smartwatch</p>
+          <p class="card-price">₹2,499 <span>₹5,999</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/watch2.jpg">
+        <div class="card-info">
+          <p class="card-title">Boat Wave Sigma 3</p>
+          <p class="card-price">₹1,899 <span>₹3,999</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="amazon-arrow right" onclick="slideRight('Computer_Peripherals-slider-4')">&#10095;</button>
+
+ </div>
+
+</section>
+
+
+<section class="amazon-slider-section" id="bands">
+   
+  <div class="amazon-slider-container" style="border: none;">
+    <h2>International Bands</h2>
+    <hr>
+    <button class="amazon-arrow left" onclick="slideLeft('Computer_Peripherals-slider-5')">&#10094;</button>
+
+    <div class="amazon-slider" id="Computer_Peripherals-slider-5">
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse2.jpg">
+        <div class="card-info">
+          <p class="card-title">Portronics Toad Bluetooth Mouse</p>
+          <p class="card-price">₹599 <span>₹1,499</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse3.jpg">
+        <div class="card-info">
+          <p class="card-title">HP M290 Wireless Mouse</p>
+          <p class="card-price">₹499 <span>₹1,199</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/watch1.jpg">
+        <div class="card-info">
+          <p class="card-title">Noise Twist Smartwatch</p>
+          <p class="card-price">₹2,499 <span>₹5,999</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/watch2.jpg">
+        <div class="card-info">
+          <p class="card-title">Boat Wave Sigma 3</p>
+          <p class="card-price">₹1,899 <span>₹3,999</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="amazon-arrow right" onclick="slideRight('Computer_Peripherals-slider-5')">&#10095;</button>
+
+  </div>
+
+</section>
+
+
+<section class="amazon-slider-section" id="cables" >
+   
+ <div class="amazon-slider-container-white" style="border: none;">
+   <h2>Cables</h2>
+    <hr>
+    <button class="amazon-arrow left" onclick="slideLeft('Computer_Peripherals-slider-4')">&#10094;</button>
+
+    <div class="amazon-slider" id="Computer_Peripherals-slider-4">
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse1.jpg">
+        <div class="card-info">
+          <p class="card-title">HP KM120 Wired Mouse</p>
+          <p class="card-price">₹749 <span>₹1,399</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse2.jpg">
+        <div class="card-info">
+          <p class="card-title">Portronics Toad Bluetooth Mouse</p>
+          <p class="card-price">₹599 <span>₹1,499</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/mouse3.jpg">
+        <div class="card-info">
+          <p class="card-title">HP M290 Wireless Mouse</p>
+          <p class="card-price">₹499 <span>₹1,199</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/watch1.jpg">
+        <div class="card-info">
+          <p class="card-title">Noise Twist Smartwatch</p>
+          <p class="card-price">₹2,499 <span>₹5,999</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+      <div class="amazon-card">
+        <img src="images/watch2.jpg">
+        <div class="card-info">
+          <p class="card-title">Boat Wave Sigma 3</p>
+          <p class="card-price">₹1,899 <span>₹3,999</span>
+          <button onclick="addToCart('Google Pixel 9A',
+         40800,
+         'assets/Google Pixel 9A.jpg',
+        'Porcelain, 8GB RAM, 256GB Storge', 'shopping'
+        )">Add </button></p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="amazon-arrow right" onclick="slideRight('Computer_Peripherals-slider-4')">&#10095;</button>
+
+ </div>
+
+</section>
+
+</main>  
+
+  <footer>
+    <p>&copy; 2025 Amazon</p>
+  </footer>
+  <script src="\script.js"></script>
+  <div id="toast" class="toast"></div>
+
+</body>
+</html>      

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Service | Amazon </title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="navbar">
+
+  <!-- Left: Logo -->
+  <div class="nav-left">
+    <a href="index.html" class="logo">Nexora</a>
+  </div>
+
+  <!-- Center: Search -->
+  <div class="nav-center">
+    <div class="search-bar">
+      <input type="text" placeholder="Search Products" id="searchInput" />
+      <button onclick="searchProducts()">Search</button>
+    </div>
+  </div>
+
+  <a href="orders.html" style="padding-right: 40px; text-decoration: none;">My Orders</a>
+
+  <!-- Right: Cart + Auth -->
+  <div class="nav-right">
+    <a href="cart.html" class="cart-link">
+      Cart (<span id="cart-count">0</span>)
+    </a>
+
+     <div id="authSection">
+    <a href="login.html" class="nav-item">Login</a>
+    <a href="register.html" class="nav-item">Register</a>
+  </div>
+  </div>
+
+</header>
+  <nav class="categories">
+    <a href="Nexora_Daily/Daily.html">Nexora Daily</a>
+    <a href="bestseller.html">Bestseller</a>
+    <a href="todays_deal.html">Today's Deal</a>
+    <a href="mobile.html">Mobile</a>
+    <a href="Computers.html">Computers</a>
+    <a href="electronics.html">Electronics</a>
+    <a href="fashion.html">Fashion</a>
+    <a href="home.html">Home & Kitchen</a>
+    <a href="books.html">Books</a>
+    <a href="toys.html">Toys & Games</a>
+    <a href="Nexora_pay.html">Nexora Pay</a>
+    <a href="car_bikes.html">Cars & Bikes</a>
+    <a href="customer_service.html">Customer Service</a>
+  </nav>
+<body class="cs-body">
+
+  <div class="alerts">
+    <div class="alert-box">⚠️ You can view the content of this page in your preferred language, by clicking <a href="#">here</a>. For steps see our <a href="#">Help</a> page.</div>
+    <div class="alert-box">⚠️ For information on our live sale events, refer to our Help page on <a href="#">Sale Events</a>.</div>
+    <div class="alert-box">⚠️ For support during your shopping journey, refer to the <a href="#">Customer Service - FAQs</a> Help page.</div>
+  </div>
+
+  <main class="help-main">
+    <h1>Hello. What can we help you with?</h1>
+    <hr />
+    <h2>Some things you can do here</h2>
+
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="img/orders.png" alt="Orders">
+        <h3>Your Orders</h3>
+        <p>Track packages<br>Edit or cancel orders</p>
+      </div>
+      <div class="grid-item">
+        <img src="img/returns.png" alt="Returns">
+        <h3>Returns and Refunds</h3>
+        <p>Return or exchange items<br>Print return mailing labels</p>
+      </div>
+      <div class="grid-item">
+        <img src="img/address.png" alt="Addresses">
+        <h3>Manage Addresses</h3>
+        <p>Update your addresses<br>Add address, landmark details</p>
+      </div>
+      <div class="grid-item">
+        <img src="img/prime.png" alt="Prime">
+        <h3>Manage Prime</h3>
+        <p>View your benefits<br>Membership details</p>
+      </div>
+      <div class="grid-item">
+        <img src="img/payment.png" alt="Payment">
+        <h3>Payment Settings</h3>
+        <p>Add or edit payment methods<br>Change expired card</p>
+      </div>
+      <div class="grid-item">
+        <img src="img/account.png" alt="Account">
+        <h3>Account Settings</h3>
+        <p>Change your email or password<br>Update login info</p>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
